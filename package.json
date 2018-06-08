@@ -1,0 +1,16 @@
+{
+  "name": "GetTranslation",
+  "description": "Lambda service to translate text using Google Translate",
+  "main": "index.js",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3",
+    "lambda-tester": "^3.4.1"
+  },
+  "dependencies": {
+    "@google-cloud/translate": "^1.1.0"
+  }
+}
