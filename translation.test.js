@@ -6,7 +6,7 @@ test('should return translation', () => {
 return LambdaTester( lambda.handler )
     .event({text: 'mom', target:'ko'})
     .expectResult( result => {
-        expect( result.length ).toEqual(1);
+        expect( result.translation.length ).toEqual(1);
     });
 });
 
@@ -14,7 +14,7 @@ test('should return multiple translation', () => {
 return LambdaTester( lambda.handler )
     .event({text: ['supercalifragilisticexpialidocious','help','mom','아빠', '엄마'], target: 'ko'})
     .expectResult( result => {
-        expect( result.length ).toEqual(5);
+        expect( result.translation.length ).toEqual(5);
     });
 });
 

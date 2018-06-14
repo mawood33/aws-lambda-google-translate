@@ -30,7 +30,8 @@ exports.handler = function( event, context, callback ) {
                 translations = Array.isArray(translations)
                     ? translations
                     : [translations];
-                callback(null, translations);
+                event.translation = translations;
+                callback(null, event);
             })
             .catch(err => {
                 callback(err);
